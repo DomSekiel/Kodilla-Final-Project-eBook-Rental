@@ -1,0 +1,1197 @@
+{
+  "info": {
+    "_postman_id": "8875a2a7-2b09-4997-90fe-632ffa9cc5e5",
+    "name": "Kodilla eBook Rental Project",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51595398"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Register",
+          "item": [
+            {
+              "name": "Rejestracja istniejącego użytkownika",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "exec": [
+                      "pm.environment.set(\"userId\", \"319\"); "
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "",
+                    "value": "",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"login\": \"massimotadei@inter.it\",\r\n  \"password\": \"massimointer12@3\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/user/register",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "user",
+                    "register"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Rejestracja bez danych",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/user/register",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "user",
+                    "register"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Rejestracja nowego użytkownika",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"login\":\"massimotadei@inter.com.it\",\r\n    \"password\": \"massimointer12@3\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/user/register",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "user",
+                    "register"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Rejestracja nowego użytkownika",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"login\":\"massimotadei@inter.com.it\",\r\n    \"password\": \"massimointer12@3\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/user/register",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "user",
+                        "register"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 200
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "date",
+                      "value": "Sat, 28 Mar 2026 13:19:56 GMT"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=63072000; includeSubDomains"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "via",
+                      "value": "1.1 google"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"id\": 6088,\n    \"new\": true\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Login",
+          "item": [
+            {
+              "name": "Logowanie niepoprawne hasło",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"login\":\"massimotadei@inter.it\",\r\n    \"password\": \"wrongpassword\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/user/login",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "user",
+                    "login"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Logowanie niepoprawny login",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"login\":\"giuseppebergomi@inter.it\",\r\n    \"password\":\"giuseppeinter12@3\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/user/login",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "user",
+                    "login"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Logowanie poprawne",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"login\":\"massimotadei@inter.com.it\",\r\n    \"password\": \"massimointer12@3\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/user/login",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "user",
+                    "login"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Validation",
+          "item": [
+            {
+              "name": "Puste pola",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "",
+                      "// NOTE: This API returns HTTP 200 with body -1 for empty/invalid credentials",
+                      "// instead of the more conventional 400 Bad Request. This is the expected behavior",
+                      "// for this endpoint and the tests below reflect that.",
+                      "",
+                      "pm.test(\"Status code is 200\", function () {",
+                      "    pm.response.to.have.status(200);",
+                      "});",
+                      "",
+                      "pm.test(\"Response body is -1 (empty/invalid credentials indicator)\", function () {",
+                      "    var responseText = pm.response.text().trim();",
+                      "    var isMinusOneString = responseText === \"-1\";",
+                      "    var isMinusOneNumber = Number(responseText) === -1;",
+                      "    pm.expect(isMinusOneString || isMinusOneNumber).to.be.true;",
+                      "});",
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"login\":\"\",\r\n    \"password\": \"\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/user/login",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "user",
+                    "login"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Titles",
+      "item": [
+        {
+          "name": "Dodanie tytułu bez tytułu",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": 6088,\r\n    \"author\":\"J.R.R. Tolkien\",\r\n    \"year\":\"1954\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pobranie listy tytułów",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/?userId=6088",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "6088"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Dodanie tytułu",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": 6088,\r\n    \"author\": \"J.R.R. Tolkien\",\r\n    \"title\": \"The Fellowship of the Ring\",\r\n    \"year\": 1954\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Dodanie tytułu bez autora",
+          "protocolProfileBehavior": {
+            "disabledSystemHeaders": {}
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "6088",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": 6088,\r\n    \"title\": \"Two Towers\",\r\n    \"year\": 1954\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Dodanie tylko roku",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "6088",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": 6088,\r\n    \"year\": 1954\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edycja tytułu",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "    {\r\n        \"userId\": 6088,\r\n        \"id\": 6100,\r\n        \"author\": \"John Ronald Reuel Tolkien\",\r\n        \"title\": \"The Fellowship of the Ring\",\r\n        \"year\": 1954\r\n    }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edycja nieistniejącego tytułu",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\":\"6088\",\r\n    \"id\":\"\",\r\n    \"author\":\"J.R.R. Tolkien\",\r\n    \"title\":\"The Return of the King\",\r\n    \"year\": 1955\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Usunięcie tytułu",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/titles/?userId=6088&id=6101",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "6088"
+                },
+                {
+                  "key": "id",
+                  "value": "6101"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edge case – bardzo długi tytuł",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": 6088,\r\n    \"author\": \"J.R.R. Tolkien\",\r\n    \"title\": \"XYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZ\",\r\n    \"year\": 2026\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Items",
+      "item": [
+        {
+          "name": "Dodanie egzemplarza",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"titleId\": 6089 ,\r\n  \"purchaseDate\": \"2026-03-29\",\r\n  \"userId\": 6088\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/items/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "items",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pobranie listy egzemplarzy",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/items/?userId=6088&titleId=6089",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "items",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "6088"
+                },
+                {
+                  "key": "titleId",
+                  "value": "6089"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Dodanie egzemplarza bez titleId",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"purchaseDate\": \"2026-03-29\",\r\n    \"userId\": 6088\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/items/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "items",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edycja egzemplarza",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\": 6105,\r\n    \"userId\": 6088,\r\n    \"purchaseDate\": \"2026-03-29\",\r\n    \"status\": \"RENTED\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/items/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "items",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Usunięcie egzemplarza",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Use-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/items/?userId=6088&id=6106",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "items",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "6088"
+                },
+                {
+                  "key": "id",
+                  "value": "6106"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edge case – data przeszła",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"titleId\": 6089,\r\n    \"purchaseDate\": \"2026-03-01\",\r\n    \"userId\": 6088\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/items/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "items",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Rents",
+      "item": [
+        {
+          "name": "Dodanie wypożyczenia",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": 6088,\r\n    \"itemId\": 6108,\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-03-30\",\r\n    \"expirationDate\": \"2026-04-02\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pobranie listy wypożyczeń",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "User-Id",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/rents/?userId=6088&itemId=6108",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "6088"
+                },
+                {
+                  "key": "itemId",
+                  "value": "6108"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Dodanie wypożyczenia bez klienta",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": 6088,\r\n    \"itemId\": 6108,\r\n    \"rentDate\": \"2026-03-30\",\r\n    \"expirationDate\": \"2026-04-02\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edycja wypożyczenia",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\": 6109,\r\n    \"userId\":6088,\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-03-31\",\r\n    \"expirationDate\": \"2026-04-03\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Usunięcie wypożyczenia",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/rents/?userId=6088&id=6109",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "6088"
+                },
+                {
+                  "key": "id",
+                  "value": "6109"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edge case – expirationDate < loanDate",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n    \"clientName\": \"Massimo Tadei\",\r\n    \"loanDate\": \"2026-03-30\",\r\n    \"expirationDate\": \"2026-03-29\"\r\n}\r\n\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edge case – bardzo długi clientName",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": 6088,\r\n    \"itemId\": 6107,\r\n    \"customerName\": \"XYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZ\",\r\n    \"rentDate\": \"2026-03-30\",\r\n    \"expirationDate\": \"2026-04-02\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Walidacja pustych dat",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": 6088,\r\n    \"itemId\": 6108,\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"\",\r\n    \"expirationDate\": \"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edge case - pole read-only",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\":9999,\r\n    \"userId\": 6088,\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-03-30\",\r\n    \"expirationDate\": \"2026-04-02\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edge case - strefa czasowa – różne timezony",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": 6088,\r\n    \"itemId\": 6108,\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-03-30T21:00:00Z\",\r\n    \"expirationDate\": \"2026-04-04T04:00:00Z\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edge case - wypożyczenie egzemplarza z już wypożyczonym statusem",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": 6088,\r\n    \"id\": 6112,\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-03-30\",\r\n    \"expirationDate\": \"2026-04-02\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
