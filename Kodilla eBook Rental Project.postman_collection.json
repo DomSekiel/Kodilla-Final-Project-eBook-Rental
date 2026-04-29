@@ -1,0 +1,5128 @@
+{
+  "info": {
+    "_postman_id": "b70c21c0-1728-4249-9f35-82c39bf5ccb9",
+    "name": "Kodilla eBook Rental Project",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51595398"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Register",
+          "item": [
+            {
+              "name": "Rejestracja istniejącego użytkownika",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "exec": [
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "",
+                    "value": "",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"login\": \"massimotadei@inter.it\",\r\n    \"password\": \"massimointer12@3\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/user/register",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "user",
+                    "register"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Rejestracja istniejącego użytkownika",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "",
+                        "value": "",
+                        "type": "text",
+                        "disabled": true
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"login\": \"massimotadei@inter.it\",\r\n    \"password\": \"massimointer12@3\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/user/register",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "user",
+                        "register"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "Text",
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 200
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "date",
+                      "value": "Tue, 28 Apr 2026 08:25:10 GMT"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=63072000; includeSubDomains"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "via",
+                      "value": "1.1 google"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"id\": 6086,\n    \"new\": false\n}"
+                }
+              ]
+            },
+            {
+              "name": "Rejestracja bez danych",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/user/register",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "user",
+                    "register"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Rejestracja bez danych",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/user/register",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "user",
+                        "register"
+                      ]
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": "Text",
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 400
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "date",
+                      "value": "Mon, 27 Apr 2026 22:29:13 GMT"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=63072000; includeSubDomains"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "via",
+                      "value": "1.1 google"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"timestamp\": \"2026-04-27T22:29:13.568+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"path\": \"/user/register\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Rejestracja nowego użytkownika",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "exec": [
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "var jsonData = pm.response.json();\r",
+                      "pm.environment.set(\"userId\", jsonData.id);"
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"login\": \"harykeane@bayern.de\",\r\n    \"password\": \"munchen\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/user/register",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "user",
+                    "register"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Rejestracja nowego użytkownika",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"login\": \"harykeane@bayern.de\",\r\n    \"password\": \"munchen\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/user/register",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "user",
+                        "register"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "Text",
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 200
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "date",
+                      "value": "Mon, 27 Apr 2026 22:24:47 GMT"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=63072000; includeSubDomains"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "via",
+                      "value": "1.1 google"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"id\": 6141,\n    \"new\": true\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Login",
+          "item": [
+            {
+              "name": "Logowanie niepoprawne hasło",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"login\": \"harykeane@bayern.de\",\r\n    \"password\": \"XYZ\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/user/login",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "user",
+                    "login"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Logowanie niepoprawne hasło",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"login\": \"harykeane@bayern.de\",\r\n    \"password\": \"XYZ\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/user/login",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "user",
+                        "login"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "Text",
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 200
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "date",
+                      "value": "Mon, 27 Apr 2026 22:33:35 GMT"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=63072000; includeSubDomains"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "via",
+                      "value": "1.1 google"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "-1"
+                }
+              ]
+            },
+            {
+              "name": "Logowanie niepoprawny login",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"login\": \"XYZ\",\r\n    \"password\": \"munchen\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/user/login",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "user",
+                    "login"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Logowanie niepoprawny login",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"login\": \"XYZ\",\r\n    \"password\": \"munchen\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/user/login",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "user",
+                        "login"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "Text",
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 200
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "date",
+                      "value": "Mon, 27 Apr 2026 22:34:29 GMT"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=63072000; includeSubDomains"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "via",
+                      "value": "1.1 google"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "-1"
+                }
+              ]
+            },
+            {
+              "name": "Logowanie poprawne dane",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"login\": \"harykeane@bayern.de\",\r\n    \"password\": \"munchen\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/user/login",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "user",
+                    "login"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Logowanie poprawne dane",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"login\": \"harykeane@bayern.de\",\r\n    \"password\": \"munchen\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/user/login",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "user",
+                        "login"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "Text",
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 200
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "date",
+                      "value": "Tue, 28 Apr 2026 08:38:13 GMT"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=63072000; includeSubDomains"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "via",
+                      "value": "1.1 google"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "6141"
+                }
+              ]
+            },
+            {
+              "name": "Logowanie bez uzupełnionego body",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/user/login",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "user",
+                    "login"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Logowanie bez uzupełnionego body",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/user/login",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "user",
+                        "login"
+                      ]
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": "Text",
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 400
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "date",
+                      "value": "Mon, 27 Apr 2026 22:35:09 GMT"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=63072000; includeSubDomains"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "via",
+                      "value": "1.1 google"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"timestamp\": \"2026-04-27T22:35:09.316+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"path\": \"/user/login\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Validation",
+          "item": [
+            {
+              "name": "Puste pola",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "",
+                      "// NOTE: This API returns HTTP 200 with body -1 for empty/invalid credentials",
+                      "// instead of the more conventional 400 Bad Request. This is the expected behavior",
+                      "// for this endpoint and the tests below reflect that.",
+                      "",
+                      "pm.test(\"Status code is 200\", function () {",
+                      "    pm.response.to.have.status(200);",
+                      "});",
+                      "",
+                      "pm.test(\"Response body is -1 (empty/invalid credentials indicator)\", function () {",
+                      "    var responseText = pm.response.text().trim();",
+                      "    var isMinusOneString = responseText === \"-1\";",
+                      "    var isMinusOneNumber = Number(responseText) === -1;",
+                      "    pm.expect(isMinusOneString || isMinusOneNumber).to.be.true;",
+                      "});",
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                },
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "packages": {},
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"login\":\"\",\r\n    \"password\":\"\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}user/login",
+                  "host": [
+                    "{{baseUrl}}user"
+                  ],
+                  "path": [
+                    "login"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Puste pola",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"login\":\"\",\r\n    \"password\":\"\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}user/login",
+                      "host": [
+                        "{{baseUrl}}user"
+                      ],
+                      "path": [
+                        "login"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 200
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "date",
+                      "value": "Wed, 29 Apr 2026 16:42:25 GMT"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=63072000; includeSubDomains"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "via",
+                      "value": "1.1 google"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "497"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Titles",
+      "item": [
+        {
+          "name": "Usunięcie tytułu posiadającego egzemplarze",
+          "item": [
+            {
+              "name": "Dodanie tytułu",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "var titleId = pm.response.text();\r",
+                      "pm.environment.set(\"titleId\", Number(titleId));"
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"userId\": {{userId}},\r\n  \"author\": \"Title with item to delete\",\r\n  \"title\": \"Title with item to delete\",\r\n  \"year\": 2020\r\n  }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/titles/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "titles",
+                    ""
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Dodanie tytułu",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"userId\": {{userId}},\r\n  \"author\": \"Title with item to delete\",\r\n  \"title\": \"Title with item to delete\",\r\n  \"year\": 2020\r\n  }",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/titles/",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "titles",
+                        ""
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "Text",
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 200
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "date",
+                      "value": "Tue, 28 Apr 2026 10:49:19 GMT"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=63072000; includeSubDomains"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "via",
+                      "value": "1.1 google"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "6165"
+                },
+                {
+                  "name": "Dodanie tytułu",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"userId\": {{userId}},\r\n  \"author\": \"Title with item to delete\",\r\n  \"title\": \"Title with item to delete\",\r\n  \"year\": 2020\r\n  }",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/titles/",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "titles",
+                        ""
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "Text",
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 200
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "date",
+                      "value": "Tue, 28 Apr 2026 10:49:19 GMT"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=63072000; includeSubDomains"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "via",
+                      "value": "1.1 google"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "6165"
+                }
+              ]
+            },
+            {
+              "name": "Dodanie egzemplarza",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "var itemId = pm.response.text();\r",
+                      "pm.environment.set(\"itemId\", Number(itemId));"
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"userId\": {{userId}},\r\n  \"titleId\": {{titleId}},\r\n  \"purchaseDate\": \"2026-04-28\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/items/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "items",
+                    ""
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Dodanie egzemplarza",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"userId\": {{userId}},\r\n  \"titleId\": {{titleId}},\r\n  \"purchaseDate\": \"2026-04-28\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/items/",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "items",
+                        ""
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "Text",
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 200
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "date",
+                      "value": "Tue, 28 Apr 2026 10:49:46 GMT"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=63072000; includeSubDomains"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "via",
+                      "value": "1.1 google"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "6166"
+                }
+              ]
+            },
+            {
+              "name": "Usunięcie tytułu",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "// Usunięcie tytułu z istniejącymi elementami powinno zwrócić błąd 409 Konflikt lub 400 Błędne żądanie\r",
+                      "// Rzeczywisty wynik: 500 Wewnętrzny błąd serwera\r",
+                      "// Backend nie obsługuje poprawnie tego scenariusza"
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/titles/?userId={{userId}}&id={{titleId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "titles",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "userId",
+                      "value": "{{userId}}"
+                    },
+                    {
+                      "key": "id",
+                      "value": "{{titleId}}"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Usunięcie tytułu",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/titles/?userId={{userId}}&id={{titleId}}",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "titles",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "userId",
+                          "value": "{{userId}}"
+                        },
+                        {
+                          "key": "id",
+                          "value": "{{titleId}}"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Internal Server Error",
+                  "code": 500,
+                  "_postman_previewlanguage": "Text",
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 500
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "date",
+                      "value": "Tue, 28 Apr 2026 10:50:29 GMT"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=63072000; includeSubDomains"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "via",
+                      "value": "1.1 google"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"timestamp\": \"2026-04-28T10:50:29.290+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/titles/\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Dodanie tytułu bez nazwy",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"author\":\"J.R.R. Tolkien\",\r\n    \"year\":\"1954\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Dodanie tytułu bez nazwy",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"author\":\"J.R.R. Tolkien\",\r\n    \"year\":\"1954\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/titles/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "titles",
+                    ""
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 27 Apr 2026 22:51:55 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-27T22:51:55.276+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/titles/\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Pobranie listy tytułów",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/?userId={{userId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "{{userId}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Pobranie listy tytułów",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/titles/?userId={{userId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "titles",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "userId",
+                      "value": "{{userId}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 27 Apr 2026 22:43:44 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 6142,\n        \"author\": \"J.R.R. Tolkien\",\n        \"title\": \"The Fellowship of the Ring\",\n        \"year\": 1954\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Pobranie listy tytułów bez autoryzacji",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Pobranie listy tytułów bez autoryzacji",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/titles/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "titles",
+                    ""
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 400
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 27 Apr 2026 22:50:28 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-27T22:50:28.017+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"path\": \"/titles/\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Dodanie tytułu",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var titleId = pm.response.text();\r",
+                  "pm.environment.set(\"titleId\", Number(titleId));"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"author\": \"J.R.R. Tolkien\",\r\n    \"title\": \"Two Towers\",\r\n    \"year\": 1954\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Dodanie tytułu",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"author\": \"J.R.R. Tolkien\",\r\n    \"title\": \"The Fellowship of the Ring\",\r\n    \"year\": 1954\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/titles/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "titles",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 27 Apr 2026 22:41:22 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "6142"
+            }
+          ]
+        },
+        {
+          "name": "Edge case - bardzo długi tytuł",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var titleId = pm.response.text();\r",
+                  "pm.environment.set(\"titleId\", Number(titleId));"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"author\": \"J.R.R. Tolkien\",\r\n    \"title\": \"XYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZ\",\r\n    \"year\": 1954\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Edge case - bardzo długi tytuł",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"author\": \"J.R.R. Tolkien\",\r\n    \"title\": \"XYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZ\",\r\n    \"year\": 1954\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/titles/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "titles",
+                    ""
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 10:42:24 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-28T10:42:24.549+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/titles/\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Dodanie tytułu bez autora",
+          "protocolProfileBehavior": {
+            "disabledSystemHeaders": {}
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"title\": \"Two Towers\",\r\n    \"year\": 1954\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Dodanie tytułu bez autora",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"title\": \"Two Towers\",\r\n    \"year\": 1954\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/titles/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "titles",
+                    ""
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 27 Apr 2026 22:52:52 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-27T22:52:52.033+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/titles/\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Dodanie roku publikacji książki bez tytułu i autora",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"year\": 1954\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Dodanie roku publikacji książki bez tytułu i autora",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"year\": 1954\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/titles/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "titles",
+                    ""
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 27 Apr 2026 22:53:36 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-27T22:53:36.375+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/titles/\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Edycja tytułu",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "    {\r\n        \"id\": {{titleId}},\r\n        \"userId\": {{userId}},\r\n        \"author\": \"John Ronald Reuel Tolkien\",\r\n        \"title\": \"The Fellowship of the Ring\",\r\n        \"year\": 1954\r\n    }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Edycja tytułu",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "    {\r\n        \"id\": {{titleId}},\r\n        \"userId\": {{userId}},\r\n        \"author\": \"John Ronald Reuel Tolkien\",\r\n        \"title\": \"The Fellowship of the Ring\",\r\n        \"year\": 1954\r\n    }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/titles/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "titles",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 27 Apr 2026 22:55:38 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 6142,\n    \"author\": \"John Ronald Reuel Tolkien\",\n    \"title\": \"The Fellowship of the Ring\",\n    \"year\": 1954\n}"
+            }
+          ]
+        },
+        {
+          "name": "Usunięcie tytułu",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.unset(\"titleId\");"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/?userId={{userId}}&id={{titleId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "{{userId}}"
+                },
+                {
+                  "key": "id",
+                  "value": "{{titleId}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Usunięcie tytułu",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/titles/?userId={{userId}}&id={{titleId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "titles",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "userId",
+                      "value": "{{userId}}"
+                    },
+                    {
+                      "key": "id",
+                      "value": "{{titleId}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 27 Apr 2026 23:10:49 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "true"
+            }
+          ]
+        },
+        {
+          "name": "Usunięcie nieistniejącego tytułu",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/?userId={{userId}}&id=9999",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "{{userId}}"
+                },
+                {
+                  "key": "id",
+                  "value": "9999"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Usunięcie nieistniejącego tytułu",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/titles/?userId={{userId}}&id=9999",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "titles",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "userId",
+                      "value": "{{userId}}"
+                    },
+                    {
+                      "key": "id",
+                      "value": "9999"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 27 Apr 2026 23:12:04 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "false"
+            }
+          ]
+        },
+        {
+          "name": "Brak autoryzacji",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"author\": \"J.R.R. Tolkien\",\r\n    \"title\": \"The Hobbit\",\r\n    \"year\": 1937\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Brak autoryzacji",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"author\": \"J.R.R. Tolkien\",\r\n    \"title\": \"The Hobbit\",\r\n    \"year\": 1937\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/titles/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "titles",
+                    ""
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 27 Apr 2026 23:14:44 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-27T23:14:44.206+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/titles/\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Edycja nieistniejącego tytułu",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"id\": 9999,\r\n    \"author\": \"J.R.R. Tolkien\",\r\n    \"title\": \"The Return of the King\",\r\n    \"year\": 1955\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/titles/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Edycja nieistniejącego tytułu",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"id\": 9999,\r\n    \"author\": \"J.R.R. Tolkien\",\r\n    \"title\": \"The Return of the King\",\r\n    \"year\": 1955\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/titles/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "titles",
+                    ""
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 27 Apr 2026 23:07:21 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-27T23:07:21.822+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/titles/\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Items",
+      "item": [
+        {
+          "name": "Dodanie egzemplarza",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var itemId = pm.response.text().trim();\r",
+                  "pm.environment.set(\"itemId\", Number(itemId));"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"titleId\": {{titleId}},\r\n  \"purchaseDate\": \"2026-04-27\",\r\n  \"userId\": {{userId}}\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/items/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "items",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Dodanie egzemplarza",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"titleId\": {{titleId}},\r\n  \"purchaseDate\": \"2026-04-28\",\r\n  \"userId\": {{userId}}\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/items/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "items",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 09:20:04 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "6163"
+            },
+            {
+              "name": "Dodanie egzemplarza",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"titleId\": {{titleId}},\r\n  \"purchaseDate\": \"2026-04-27\",\r\n  \"userId\": {{userId}}\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/items/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "items",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 12:43:07 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "6167"
+            }
+          ]
+        },
+        {
+          "name": "Pobranie listy egzemplarzy",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/items/?userId={{userId}}&titleId={{titleId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "items",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "{{userId}}"
+                },
+                {
+                  "key": "titleId",
+                  "value": "{{titleId}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Pobranie listy egzemplarzy",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "User-ID",
+                    "value": "{{userId}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/items/?userId={{userId}}&titleId={{titleId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "items",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "userId",
+                      "value": "{{userId}}"
+                    },
+                    {
+                      "key": "titleId",
+                      "value": "{{titleId}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 12:43:33 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 6166,\n        \"purchaseDate\": \"2026-04-28\",\n        \"status\": \"AVAILABLE\"\n    },\n    {\n        \"id\": 6167,\n        \"purchaseDate\": \"2026-04-27\",\n        \"status\": \"AVAILABLE\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Pobranie listy egzemplarzy bez autoryzacji",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/items/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "items",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Pobranie listy egzemplarzy bez autoryzacji",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "User-ID",
+                    "value": "{{userId}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/items/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "items",
+                    ""
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 400
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 27 Apr 2026 23:54:48 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-27T23:54:48.700+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"path\": \"/items/\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Dodanie egzemplarza bez titleId",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"purchaseDate\": \"2026-03-29\",\r\n    \"userId\": {{userId}}\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/items/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "items",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Dodanie egzemplarza bez titleId",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"purchaseDate\": \"2026-03-29\",\r\n    \"userId\": {{userId}}\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/items/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "items",
+                    ""
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 27 Apr 2026 23:56:59 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-27T23:56:59.725+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/items/\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Edycja egzemplarza (\"rented\")",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "// API nie przechowuje pola „status”.\r",
+                  "// PUT zwraca 200, ale status pozostaje dostępny w GET.\r",
+                  "// Wydaje się, że jest to ograniczenie/błąd backendu."
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\": {{itemId}},\r\n    \"userId\": {{userId}},\r\n    \"purchaseDate\": \"2026-04-28\",\r\n    \"status\": \"RENTED\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/items/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "items",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Edycja egzemplarza (\"rented\")",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id\": {{itemId}},\r\n    \"userId\": {{userId}},\r\n    \"purchaseDate\": \"2026-04-28\",\r\n    \"status\": \"RENTED\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/items/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "items",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 07:05:41 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 6150,\n    \"purchaseDate\": \"2026-04-28\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Edycja egzemplarza (\"avaliable\")",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\": {{itemId}},\r\n    \"userId\": {{userId}},\r\n    \"purchaseDate\": \"2026-04-28\",\r\n    \"status\": \"AVALIABLE\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/items/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "items",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Edycja egzemplarza (\"avaliable\")",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "User-ID",
+                    "value": "{{userId}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id\": {{itemId}},\r\n    \"userId\": {{userId}},\r\n    \"purchaseDate\": \"2026-04-28\",\r\n    \"status\": \"AVALIABLE\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/items/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "items",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 09:15:11 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 6161,\n    \"purchaseDate\": \"2026-04-28\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Usunięcie egzemplarza",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.unset(\"itemId\");"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/items/?userId={{userId}}&id={{itemId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "items",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "{{userId}}"
+                },
+                {
+                  "key": "id",
+                  "value": "{{itemId}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Usunięcie egzemplarza",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/items/?userId={{userId}}&id={{itemId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "items",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "userId",
+                      "value": "{{userId}}"
+                    },
+                    {
+                      "key": "id",
+                      "value": "{{itemId}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 09:20:53 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "true"
+            }
+          ]
+        },
+        {
+          "name": "Edge case – data przyszła",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"titleId\": {{titleId}},\r\n    \"purchaseDate\": \"2026-04-30\",\r\n    \"userId\": {{userId}}\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/items/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "items",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Edge case – data przyszła",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"titleId\": {{titleId}},\r\n    \"purchaseDate\": \"2026-04-30\",\r\n    \"userId\": {{userId}}\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/items/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "items",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 05:35:02 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "6153"
+            }
+          ]
+        },
+        {
+          "name": "Usunięcie nieistniejącego egzemplarza",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/items/?userId={{userId}}&id=9999",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "items",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "{{userId}}"
+                },
+                {
+                  "key": "id",
+                  "value": "9999"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Usunięcie nieistniejącego egzemplarza",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/items/?userId={{userId}}&id=9999",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "items",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "userId",
+                      "value": "{{userId}}"
+                    },
+                    {
+                      "key": "id",
+                      "value": "9999"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 05:37:58 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-28T05:37:58.510+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/items/\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Brak autoryzacji",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"purchaseDate\": \"2026-04-28\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/items/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "items",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Brak autoryzacji",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"purchaseDate\": \"2026-04-28\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/items/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "items",
+                    ""
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 05:42:31 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-28T05:42:31.228+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/items/\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Edycja nieistniejącego egzemplarza",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\": 9999,\r\n    \"userId\": {{userId}},\r\n    \"purchaseDate\": \"2026-03-29\",\r\n    \"status\": \"RENTED\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/items/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "items",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Edycja nieistniejącego egzemplarza",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id\": 9999,\r\n    \"userId\": {{userId}},\r\n    \"purchaseDate\": \"2026-03-29\",\r\n    \"status\": \"RENTED\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/items/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "items",
+                    ""
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 27 Apr 2026 23:59:45 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-27T23:59:45.967+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/items/\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rents",
+      "item": [
+        {
+          "name": "Pobranie wypożyczeń dla egzemplarza bez historii",
+          "item": [
+            {
+              "name": "Nowy egzemplarz",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "var itemId = pm.response.text();\r",
+                      "pm.environment.set(\"emptyItemId\", Number(itemId));"
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"userId\": {{userId}},\r\n  \"titleId\": {{titleId}},\r\n  \"purchaseDate\": \"2026-04-28\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/items/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "items",
+                    ""
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Nowy egzemplarz",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"userId\": {{userId}},\r\n  \"titleId\": {{titleId}},\r\n  \"purchaseDate\": \"2026-04-28\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/items/",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "items",
+                        ""
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "Text",
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 200
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "date",
+                      "value": "Tue, 28 Apr 2026 08:09:36 GMT"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=63072000; includeSubDomains"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "via",
+                      "value": "1.1 google"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "6162"
+                }
+              ]
+            },
+            {
+              "name": "Pobranie listy wypożyczeń",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/rents/?userId={{userId}}&itemId={{emptyItemId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rents",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "userId",
+                      "value": "{{userId}}"
+                    },
+                    {
+                      "key": "itemId",
+                      "value": "{{emptyItemId}}"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Pobranie listy wypożyczeń",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/rents/?userId={{userId}}&itemId={{emptyItemId}}",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "rents",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "userId",
+                          "value": "{{userId}}"
+                        },
+                        {
+                          "key": "itemId",
+                          "value": "{{emptyItemId}}"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "Text",
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 200
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "date",
+                      "value": "Tue, 28 Apr 2026 08:11:27 GMT"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=63072000; includeSubDomains"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "via",
+                      "value": "1.1 google"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=2592000"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Dodanie wypożyczenia",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var rentId = pm.response.text();\r",
+                  "pm.environment.set(\"rentId\", Number(rentId));"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"itemId\": {{itemId}},\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-04-28\",\r\n    \"expirationDate\": \"2026-05-01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Dodanie wypożyczenia",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"itemId\": {{itemId}},\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-04-28\",\r\n    \"expirationDate\": \"2026-05-01\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/rents/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rents",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 05:57:47 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "6154"
+            }
+          ]
+        },
+        {
+          "name": "Pobranie listy wypożyczeń",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/rents/?userId={{userId}}&itemId={{itemId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "{{userId}}"
+                },
+                {
+                  "key": "itemId",
+                  "value": "{{itemId}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Pobranie listy wypożyczeń",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/rents/?userId={{userId}}&itemId={{itemId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rents",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "userId",
+                      "value": "{{userId}}"
+                    },
+                    {
+                      "key": "itemId",
+                      "value": "{{itemId}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 05:59:46 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 6154,\n        \"customerName\": \"Massimo Tadei\",\n        \"rentDate\": \"2026-04-28\",\n        \"expirationDate\": \"2026-05-05\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Dodanie wypożyczenia bez klienta",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"itemId\": {{itemId}},\r\n    \"rentDate\": \"2026-04-28\",\r\n    \"expirationDate\": \"2026-05-01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Dodanie wypożyczenia bez klienta",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"itemId\": {{itemId}},\r\n    \"rentDate\": \"2026-04-28\",\r\n    \"expirationDate\": \"2026-05-01\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/rents/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rents",
+                    ""
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 06:06:21 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-28T06:06:21.093+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/rents/\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Edycja wypożyczenia",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\": {{rentId}},\r\n    \"userId\":{{userId}},\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-04-28\",\r\n    \"expirationDate\": \"2026-05-03\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Edycja wypożyczenia",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id\": {{rentId}},\r\n    \"userId\":{{userId}},\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-04-28\",\r\n    \"expirationDate\": \"2026-05-03\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/rents/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rents",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 06:08:57 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 6154,\n    \"customerName\": \"Massimo Tadei\",\n    \"rentDate\": \"2026-04-28\",\n    \"expirationDate\": \"2026-05-03\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Usunięcie wypożyczenia",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.unset(\"itemId\");"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/?userId={{userId}}&id={{rentId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "{{userId}}"
+                },
+                {
+                  "key": "id",
+                  "value": "{{rentId}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Usunięcie wypożyczenia",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "User-ID",
+                    "value": "{{userId}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/rents/?userId={{userId}}&id={{rentId}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rents",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "userId",
+                      "value": "{{userId}}"
+                    },
+                    {
+                      "key": "id",
+                      "value": "{{rentId}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 12:01:53 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "true"
+            }
+          ]
+        },
+        {
+          "name": "Edge case – expirationDate < loanDate",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "// API powinno odrzucać datę wygaśnięcia (expirationDate) wcześniejszą niż data wynajmu (rentDate)\r",
+                  "// Oczekiwany status: 400 Błędne żądanie\r",
+                  "// Obecny status: 200 OK (wypożyczenie utworzone)"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n    \"userId\": {{userId}},\r\n    \"itemId\": {{itemId}},\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-04-28\",\r\n    \"expirationDate\": \"2026-04-26\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Edge case – expirationDate < loanDate",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{ \r\n    \"userId\": {{userId}},\r\n    \"itemId\": {{itemId}},\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-04-28\",\r\n    \"expirationDate\": \"2026-04-26\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/rents/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rents",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 06:51:35 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "6159"
+            }
+          ]
+        },
+        {
+          "name": "Edge case – bardzo długi customerName",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "User-ID",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"itemId\": {{itemId}},\r\n    \"customerName\": \"XYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZ\",\r\n    \"rentDate\": \"2026-03-30\",\r\n    \"expirationDate\": \"2026-04-02\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Edge case – bardzo długi customerName",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "User-ID",
+                    "value": "{{userId}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"itemId\": {{itemId}},\r\n    \"customerName\": \"XYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZXYZ\",\r\n    \"rentDate\": \"2026-03-30\",\r\n    \"expirationDate\": \"2026-04-02\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/rents/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rents",
+                    ""
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 06:16:54 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-28T06:16:54.854+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/rents/\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Walidacja pustych dat",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"itemId\": {{itemId}},\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"\",\r\n    \"expirationDate\": \"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Walidacja pustych dat",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"itemId\": {{itemId}},\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"\",\r\n    \"expirationDate\": \"\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/rents/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rents",
+                    ""
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 06:18:41 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-28T06:18:41.434+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/rents/\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Edge case - strefa czasowa – różne timezony",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "// API nie akceptuje daty i godziny ISO z przesunięciem strefy czasowej.\r",
+                  "// Zwraca 400 zamiast oczekiwanych 200 (błąd lub ograniczenie)."
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"itemId\": {{itemId}},\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-04-28T23:00:00+02:00\",\r\n    \"expirationDate\": \"2026-05-02T23:00:00-05:00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Edge case - strefa czasowa – różne timezony",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"itemId\": {{itemId}},\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-04-28T23:00:00+02:00\",\r\n    \"expirationDate\": \"2026-05-02T23:00:00-05:00\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/rents/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rents",
+                    ""
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 400
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 06:37:39 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-28T06:37:39.416+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"path\": \"/rents/\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Edge case - wypożyczenie już zajętego egzemplarza",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"id\": {{rentId}},\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-04-28\",\r\n    \"expirationDate\": \"2026-05-01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Edge case - wypożyczenie już zajętego egzemplarza",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"id\": {{rentId}},\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-04-28\",\r\n    \"expirationDate\": \"2026-05-01\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/rents/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rents",
+                    ""
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 06:39:59 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-28T06:39:59.163+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/rents/\"\n}"
+            },
+            {
+              "name": "Edge case - wypożyczenie już zajętego egzemplarza",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\": {{userId}},\r\n    \"id\": {{rentId}},\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-04-28\",\r\n    \"expirationDate\": \"2026-05-01\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/rents/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rents",
+                    ""
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 14:35:56 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-28T14:35:56.940+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/rents/\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Pobranie listy wypożyczeń bez autoryzacji",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "User-Id",
+                "value": "{{userId}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Pobranie listy wypożyczeń bez autoryzacji",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "User-Id",
+                    "value": "{{userId}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/rents/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rents",
+                    ""
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 400
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 06:03:25 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-28T06:03:25.780+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"path\": \"/rents/\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Edycja nieistniejącego wypożyczenia",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\": 9999,\r\n    \"userId\":{{userId}},\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-03-31\",\r\n    \"expirationDate\": \"2026-04-03\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Edycja nieistniejącego wypożyczenia",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id\": 9999,\r\n    \"userId\":{{userId}},\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-03-31\",\r\n    \"expirationDate\": \"2026-04-03\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/rents/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rents",
+                    ""
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 06:11:48 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-28T06:11:48.755+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/rents/\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Usunięcie nieistniejącego wypożyczenia",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/rents/?userId={{userId}}&id=9999",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "{{userId}}"
+                },
+                {
+                  "key": "id",
+                  "value": "9999"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Usunięcie nieistniejącego wypożyczenia",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/rents/?userId={{userId}}&id=9999",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rents",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "userId",
+                      "value": "{{userId}}"
+                    },
+                    {
+                      "key": "id",
+                      "value": "9999"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 06:13:49 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "false"
+            }
+          ]
+        },
+        {
+          "name": "Brak autoryzacji",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"itemId\": {{itemId}},\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-04-28\",\r\n    \"expirationDate\": \"2026-05-01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rents/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "rents",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Brak autoryzacji",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"itemId\": {{itemId}},\r\n    \"customerName\": \"Massimo Tadei\",\r\n    \"rentDate\": \"2026-04-28\",\r\n    \"expirationDate\": \"2026-05-01\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/rents/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "rents",
+                    ""
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": "Text",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 28 Apr 2026 06:45:46 GMT"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+                },
+                {
+                  "key": "via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-04-28T06:45:46.410+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/rents/\"\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
